@@ -441,7 +441,8 @@ let tester = {
 
 let currentQuestion = 0;
 
-let selectedAnswer = null;
+let spokenAnswer = "";
+let answerAccepted = false;
 
 let playsUsed = 0;
 
@@ -660,10 +661,15 @@ function loadQuestion() {
 
   // ล้างคำตอบเก่า
 
-  answersContainer.innerHTML = "";
+ spokenAnswer = "";
+answerAccepted = false;
 
+nextBtn.disabled = true;
 
-  question.answers.forEach(
+document.getElementById(
+  "spokenResult"
+).textContent =
+  "กดไมค์แล้วพูดคำตอบเป็นภาษาอังกฤษ";
     (answer, index) => {
 
       const button =
@@ -911,33 +917,87 @@ playAudioBtn.addEventListener(
 // ANSWER
 // ===========================================
 
-function selectAnswer(
-  button,
-  index
-) {
+// ===========================================
+// SPEECH RECOGNITION
+// ===========================================
 
-  selectedAnswer = index;
+const SpeechRecognition =
+  window.SpeechRecognition ||
+  window.webkitSpeechRecognition;
 
 
-  document
-    .querySelectorAll(".answer-btn")
-    .forEach(btn => {
+const recognition =
+  new SpeechRecognition();
 
-      btn.classList.remove(
-        "selected"
+recognition.lang = "en-US";
+recognition.interimResults = false;
+recognition.continuous = false;
+
+
+const micBtn =
+  document.getElementById("micBtn");
+
+const spokenResult =
+  document.getElementById("spokenResult");
+
+
+micBtn.addEventListener(
+  "click",
+  () => {
+
+    spokenResult.textContent =
+      "กำลังฟัง...";
+
+    recognition.start();
+
+  }
+);
+
+
+recognition.onresult =
+  event => {
+
+    spokenAnswer =
+      event.results[0][0]
+        .transcript
+        .toLowerCase()
+        .trim();
+
+
+    spokenResult.textContent =
+      `คุณพูด: "${spokenAnswer}"`;
+
+
+    const question =
+      questions[currentQuestion];
+
+
+    answerAccepted =
+      question.acceptedKeywords.some(
+        keyword =>
+          spokenAnswer.includes(
+            keyword.toLowerCase()
+          )
       );
 
-    });
+
+    nextBtn.disabled = false;
+
+  };
 
 
-  button.classList.add(
-    "selected"
-  );
+recognition.onerror =
+  event => {
 
+    console.error(
+      "Speech recognition error:",
+      event.error
+    );
 
-  nextBtn.disabled = false;
+    spokenResult.textContent =
+      "ไม่ได้ยินคำตอบ กรุณาลองอีกครั้ง";
 
-}
+  };
 
 
 
@@ -949,40 +1009,26 @@ nextBtn.addEventListener(
   "click",
   () => {
 
-    if (selectedAnswer === null) {
+    if (!spokenAnswer) {
       return;
     }
 
 
-    const question =
-      questions[currentQuestion];
-
-
-    const isCorrect =
-      selectedAnswer ===
-      question.correct;
-
-
-    if (isCorrect) {
+    if (answerAccepted) {
       score++;
     }
 
-
-    // เก็บรายละเอียดคำตอบ
 
     testAnswers.push({
 
       question:
         currentQuestion + 1,
 
-      selected:
-        selectedAnswer,
-
-      correct:
-        question.correct,
+      spokenAnswer:
+        spokenAnswer,
 
       isCorrect:
-        isCorrect,
+        answerAccepted,
 
       playsUsed:
         playsUsed
@@ -1014,7 +1060,6 @@ nextBtn.addEventListener(
 );
 
 
-
 // ===========================================
 // SUBMIT
 // ===========================================
@@ -1027,28 +1072,34 @@ document
 
       const result = {
 
-        name: tester.name,
+  name: tester.name,
 
-        instagram: tester.instagram,
+  instagram: tester.instagram,
 
-        score: score,
+  score: score,
 
-        answers: testAnswers.map(
-          answer =>
-            answer.isCorrect
-              ? 1
-              : 0
-        ),
+  answers:
+    testAnswers.map(
+      answer =>
+        answer.isCorrect
+          ? 1
+          : 0
+    ),
 
-        listenCount: testAnswers.reduce(
-          (total, answer) =>
-            total +
-            answer.playsUsed,
-          0
-        )
+  spokenAnswers:
+    testAnswers.map(
+      answer =>
+        answer.spokenAnswer
+    ),
 
-      };
+  listenCount:
+    testAnswers.reduce(
+      (total, answer) =>
+        total + answer.playsUsed,
+      0
+    )
 
+};
 
       const submitButton =
         document.getElementById(
