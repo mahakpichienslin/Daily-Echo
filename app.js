@@ -262,7 +262,6 @@ let tester = {
 let currentQuestion = 0;
 
 let spokenAnswer = "";
-let answerAccepted = false;
 
 let playsUsed = 0;
 
@@ -443,8 +442,6 @@ function loadQuestion() {
   playsUsed = 0;
 
   spokenAnswer = "";
-
-  answerAccepted = false;
 
   nextBtn.disabled = true;
 
