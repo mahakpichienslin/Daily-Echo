@@ -21,15 +21,6 @@ const questions = [
     "Would you like your coffee hot or iced?",
 
   maxPlays: 2,
-
-  answers: [
-    "Iced, please.",
-    "Yes, I like coffee.",
-    "It's very hot.",
-    "Thank you very much."
-  ],
-
-  correct: 0
 },
 
 
@@ -42,15 +33,6 @@ const questions = [
     "Would you like a bag for that?",
 
   maxPlays: 2,
-
-  answers: [
-    "I'm looking for my bag.",
-    "Yes, I like this bag.",
-    "How much is the coffee?",
-    "No, thanks. I can carry it."
-  ],
-
-  correct: 3
 },
 
 
@@ -63,15 +45,6 @@ const questions = [
     "Cash or card?",
 
   maxPlays: 2,
-
-  answers: [
-    "Card, please.",
-    "Twenty dollars.",
-    "I don't need any cash.",
-    "Yes, I have a card."
-  ],
-
-  correct: 0
 },
 
 
@@ -84,15 +57,6 @@ const questions = [
     "Would you like anything else?",
 
   maxPlays: 2,
-
-  answers: [
-    "Yes, it's delicious.",
-    "No, that's all, thank you.",
-    "I already ate.",
-    "It's over there."
-  ],
-
-  correct: 1
 },
 
 
@@ -105,15 +69,6 @@ const questions = [
     "For here or to go?",
 
   maxPlays: 2,
-
-  answers: [
-    "I'm going home.",
-    "To go, please",
-    "I don't know where to go.",
-    "Yes, let's go."
-  ],
-
-  correct: 1
 },
 
 
@@ -126,15 +81,6 @@ const questions = [
     "Do you want it spicy?",
 
   maxPlays: 2,
-
-  answers: [
-    "I don't like this restaurant.",
-    "Yes, it's very expensive.",
-    "Just a little, please.",
-    "It's too late."
-  ],
-
-  correct: 2
 },
 
   // =========================
@@ -146,15 +92,6 @@ const questions = [
     "Could you move over a little?",
 
   maxPlays: 2,
-
-  answers: [
-    "Sure.",
-    "I'm moving tomorrow.",
-    "I don't live here.",
-    "I need a taxi."
-  ],
-
-  correct: 0
 },
 
 
@@ -167,15 +104,6 @@ const questions = [
     "Sorry, we're out of chicken today. Would beef be okay?",
 
   maxPlays: 1,
-
-  answers: [
-    "Yes, I'd like some chicken.",
-    "Sure, beef is fine.",
-    "I don't eat breakfast.",
-    "That's too expensive."
-  ],
-
-  correct: 1
 },
 
 
@@ -188,15 +116,6 @@ const questions = [
     "Would you mind taking a picture for us?",
 
   maxPlays: 1,
-
-  answers: [
-    "I don't like pictures.",
-    "I didn't bring my phone.",
-    "Of course.",
-    "Let's go somewhere else."
-  ],
-
-  correct: 2
 },
 
 
@@ -209,15 +128,6 @@ const questions = [
     "Could you keep an eye on my bag for a minute?",
 
   maxPlays: 1,
-
-  answers: [
-    "That's a nice bag.",
-    "I need a new bag.",
-    "Sure, no problem.",
-    "Where did you buy it?"
-  ],
-
-  correct: 2
 },
 
 
@@ -231,15 +141,6 @@ const questions = [
     "I'm sorry, but this isn't what I ordered.",
 
   maxPlays: 1,
-
-  answers: [
-    "I ordered it yesterday.",
-    "Thank you for your order.",
-    "I'm sorry. I'll check it for you.",
-    "Yes, that's your order."
-  ],
-
-  correct: 2
 },
 
 
@@ -252,15 +153,6 @@ const questions = [
     "Would it be possible to move to another table?",
 
   maxPlays: 1,
-
-  answers: [
-    "This table is expensive.",
-    "Let me see what's available.",
-    "I don't like tables.",
-    "I'm waiting for someone."
-  ],
-
-  correct: 1
 },
 
 
@@ -273,15 +165,6 @@ const questions = [
     "The next train has been delayed by twenty minutes.",
 
   maxPlays: 1,
-
-  answers: [
-    "I don't like trains.",
-    "Okay, I'll wait.",
-    "I arrived twenty minutes ago.",
-    "I missed the station."
-  ],
-
-  correct: 1
 },
 
 
@@ -294,15 +177,6 @@ const questions = [
     "We're fully booked tonight, but we do have a table available tomorrow.",
 
   maxPlays: 1,
-
-  answers: [
-    "Tomorrow works for me.",
-    "Great, I'll sit here tonight.",
-    "I already finished eating.",
-    "I'd like to pay now."
-  ],
-
-  correct: 0
 },
 
   
@@ -314,15 +188,6 @@ const questions = [
       "We're closing in about ten minutes.",
 
     maxPlays: 1,
-
-    answers: [
-      "Great, I'll order more coffee.",
-      "What time do you open?",
-      "I'll stay a little longer.",
-      "Okay, I'll finish up."
-    ],
-
-    correct: 3
   },
 
 
@@ -334,15 +199,6 @@ const questions = [
       "Take your time. There's no rush.",
 
     maxPlays: 1,
-
-    answers: [
-      "Thanks, no rush then.",
-      "Okay, I'll finish as quickly as possible.",
-      "Should we order now?",
-      "Let's leave right now."
-    ],
-
-    correct: 0
   },
 
 
@@ -354,15 +210,6 @@ const questions = [
       "Boarding's already started, so we should head to the gate.",
 
     maxPlays: 1,
-
-    answers: [
-      "The flight hasn't landed yet.",
-      "Let's grab a coffee first.",
-      "Okay, let's go.",
-      "I'll wait right here."
-    ],
-
-    correct: 2
   },
 
 
@@ -374,15 +221,6 @@ const questions = [
       "Your room isn't ready yet, but you're welcome to leave your bags with us.",
 
     maxPlays: 1,
-
-    answers: [
-      "I'll take my bags up now.",
-      "I don't need a room.",
-      "I'd like to check out.",
-      "Thanks, I'll leave them here."
-    ],
-
-    correct: 3
   },
 
 
@@ -394,15 +232,6 @@ const questions = [
       "Would you like separate checks, or should I just put it all on one?",
 
     maxPlays: 1,
-
-    answers: [
-      "I'd like a table for one.",
-      "One check is fine, we'll split it later.",
-      "Could we see the dessert menu?",
-      "I already paid at the counter."
-    ],
-
-    correct: 1
   },
 
 
@@ -414,15 +243,6 @@ const questions = [
       "If we don't leave now, we'll miss the last train.",
 
     maxPlays: 1,
-
-    answers: [
-      "I don't usually take the train.",
-      "Let's wait a bit longer.",
-      "Then we'd better get moving.",
-      "The station's not far from here."
-    ],
-
-    correct: 2
   }
   
 ];
@@ -925,21 +745,6 @@ recognition.onresult =
 
     spokenResult.textContent =
       `คุณพูด: "${spokenAnswer}"`;
-
-
-    const question =
-      questions[currentQuestion];
-
-
-    answerAccepted =
-      question.acceptedKeywords.some(
-        keyword =>
-          spokenAnswer.includes(
-            keyword.toLowerCase()
-          )
-      );
-
-
     nextBtn.disabled = false;
 
   };
@@ -972,12 +777,6 @@ nextBtn.addEventListener(
       return;
     }
 
-
-    if (answerAccepted) {
-      score++;
-    }
-
-
     testAnswers.push({
 
       question:
@@ -986,17 +785,12 @@ nextBtn.addEventListener(
       spokenAnswer:
         spokenAnswer,
 
-      isCorrect:
-        answerAccepted,
-
       playsUsed:
         playsUsed
 
     });
 
-
     currentQuestion++;
-
 
     if (
       currentQuestion <
