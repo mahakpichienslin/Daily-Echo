@@ -737,6 +737,31 @@ micBtn.addEventListener(
   }
 );
 
+  "click",
+  () => {
+
+    listenCount.textContent =
+  `ฟังได้อีก ${question.maxPlays} ครั้ง`;
+
+playAudioBtn.disabled =
+  false;
+
+micBtn.disabled =
+  true;
+
+spokenResult.textContent =
+  "กดไมค์แล้วพูดคำตอบเป็นภาษาอังกฤษ";
+
+}
+
+    spokenResult.textContent =
+      "กำลังฟัง...";
+
+    recognition.start();
+
+  }
+);
+
 
 recognition.onresult =
   event => {
@@ -808,19 +833,6 @@ nextBtn.addEventListener(
     ) {
 
       loadQuestion();
-      playAudioBtn.disabled = false;
-      playAudioBtn.disabled =
-  false;
-
-micBtn.disabled =
-  true;
-
-spokenResult.textContent =
-  "กดไมค์แล้วพูดคำตอบเป็นภาษาอังกฤษ";
-
-spokenResult.textContent =
-  "กดไมค์แล้วพูดคำตอบเป็นภาษาอังกฤษ";;
-
     }
 
     else {
