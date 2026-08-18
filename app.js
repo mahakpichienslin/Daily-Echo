@@ -266,8 +266,6 @@ let answerAccepted = false;
 
 let playsUsed = 0;
 
-let score = 0;
-
 
 let testAnswers = [];
 
@@ -421,8 +419,6 @@ document
   .addEventListener("click", () => {
 
     currentQuestion = 0;
-
-    score = 0;
 
     testAnswers = [];
 
@@ -828,16 +824,6 @@ document
   name: tester.name,
 
   instagram: tester.instagram,
-
-  score: score,
-
-  answers:
-    testAnswers.map(
-      answer =>
-        answer.isCorrect
-          ? 1
-          : 0
-    ),
 
   spokenAnswers:
     testAnswers.map(
