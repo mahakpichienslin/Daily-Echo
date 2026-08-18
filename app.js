@@ -700,23 +700,18 @@ const SpeechRecognition =
   window.SpeechRecognition ||
   window.webkitSpeechRecognition;
 
-if (!SpeechRecognition) {
-
-  alert(
-    "เบราว์เซอร์นี้ไม่รองรับการพูดตอบ กรุณาใช้ Google Chrome"
-  );
-
-  throw new Error(
-    "Speech Recognition not supported"
-  );
-}
-
 const recognition =
-  new SpeechRecognition();
+  SpeechRecognition
+    ? new SpeechRecognition()
+    : null;
 
-recognition.lang = "en-US";
-recognition.interimResults = false;
-recognition.continuous = false;
+if (recognition) {
+
+  recognition.lang = "en-US";
+  recognition.interimResults = false;
+  recognition.continuous = false;
+
+}
 
 
 const micBtn =
@@ -729,6 +724,15 @@ const spokenResult =
 micBtn.addEventListener(
   "click",
   () => {
+
+    if (!recognition) {
+
+      alert(
+        "อุปกรณ์หรือเบราว์เซอร์นี้ไม่รองรับการพูดตอบ กรุณาใช้ Google Chrome"
+      );
+
+      return;
+    }
 
     micBtn.disabled = true;
 
