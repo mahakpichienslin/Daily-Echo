@@ -465,13 +465,16 @@ function loadQuestion() {
     `${progress}%`;
 
   listenCount.textContent =
-    `ฟังได้อีก ${question.maxPlays} ครั้ง`;
+  `ฟังได้อีก ${question.maxPlays} ครั้ง`;
 
-  playAudioBtn.disabled =
-    false;
+playAudioBtn.disabled =
+  false;
 
-  spokenResult.textContent =
-    "กดไมค์แล้วพูดคำตอบเป็นภาษาอังกฤษ";
+micBtn.disabled =
+  true;
+
+spokenResult.textContent =
+  "กดไมค์แล้วพูดคำตอบเป็นภาษาอังกฤษ";
 
 }
 
@@ -727,19 +730,7 @@ micBtn.addEventListener(
   "click",
   () => {
 
-    listenCount.textContent =
-      `ฟังได้อีก ${question.maxPlays} ครั้ง`;
-
-    playAudioBtn.disabled =
-      false;
-
-    micBtn.disabled =
-      true;
-
-    spokenResult.textContent =
-      "กดไมค์แล้วพูดคำตอบเป็นภาษาอังกฤษ";
-
-    }
+    micBtn.disabled = true;
 
     spokenResult.textContent =
       "กำลังฟัง...";
