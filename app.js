@@ -633,7 +633,7 @@ playAudioBtn.addEventListener(
     speech.onend = () => {
 
       playsUsed++;
-
+      micBtn.disabled = false;
 
       const remaining =
         question.maxPlays -
@@ -697,6 +697,16 @@ const SpeechRecognition =
   window.SpeechRecognition ||
   window.webkitSpeechRecognition;
 
+if (!SpeechRecognition) {
+
+  alert(
+    "เบราว์เซอร์นี้ไม่รองรับการพูดตอบ กรุณาใช้ Google Chrome"
+  );
+
+  throw new Error(
+    "Speech Recognition not supported"
+  );
+}
 
 const recognition =
   new SpeechRecognition();
@@ -791,6 +801,7 @@ nextBtn.addEventListener(
     ) {
 
       loadQuestion();
+      micBtn.disabled = true;
 
     }
 
