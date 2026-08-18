@@ -12,237 +12,186 @@
 
 const questions = [
 
-  // =========================
-  // 01
-  // =========================
-
-  {
-  spokenText:
-    "Would you like your coffee hot or iced?",
-
-  maxPlays: 2,
-},
-
+ const questions = [
 
   // =========================
-  // 02
-  // =========================
-
-  {
-  spokenText:
-    "Would you like a bag for that?",
-
-  maxPlays: 2,
-},
-
-
-  // =========================
-  // 03
-  // =========================
-
-  {
-  spokenText:
-    "Cash or card?",
-
-  maxPlays: 2,
-},
-
-
-  // =========================
-  // 04
-  // =========================
-
- {
-  spokenText:
-    "Would you like anything else?",
-
-  maxPlays: 2,
-},
-
-
-  // =========================
-  // 05
-  // =========================
-
-  {
-  spokenText:
-    "For here or to go?",
-
-  maxPlays: 2,
-},
-
-
-  // =========================
-  // 06
-  // =========================
-
-  {
-  spokenText:
-    "Do you want it spicy?",
-
-  maxPlays: 2,
-},
-
-  // =========================
-  // 07
-  // =========================
-
-  {
-  spokenText:
-    "Could you move over a little?",
-
-  maxPlays: 2,
-},
-
-
-  // =========================
-  // 08
-  // =========================
-
-  {
-  spokenText:
-    "Sorry, we're out of chicken today. Would beef be okay?",
-
-  maxPlays: 1,
-},
-
-
-  // =========================
-  // 09
-  // =========================
-
-  {
-  spokenText:
-    "Would you mind taking a picture for us?",
-
-  maxPlays: 1,
-},
-
-
-  // =========================
-  // 10
-  // =========================
-
-  {
-  spokenText:
-    "Could you keep an eye on my bag for a minute?",
-
-  maxPlays: 1,
-},
-
-
-
-  // =========================
-  // 11
-  // =========================
-
-   {
-  spokenText:
-    "I'm sorry, but this isn't what I ordered.",
-
-  maxPlays: 1,
-},
-
-
-  // =========================
-  // 12
-  // =========================
-
-   {
-  spokenText:
-    "Would it be possible to move to another table?",
-
-  maxPlays: 1,
-},
-
-
-  // =========================
-  // 13
-  // =========================
-
-  {
-  spokenText:
-    "The next train has been delayed by twenty minutes.",
-
-  maxPlays: 1,
-},
-
-
-  // =========================
-  // 14
-  // =========================
-
-  {
-  spokenText:
-    "We're fully booked tonight, but we do have a table available tomorrow.",
-
-  maxPlays: 1,
-},
-
-  
-// =========================
-  // 15 — Coffee shop
+  // 01 — Coffee shop
   // =========================
   {
     spokenText:
-      "We're closing in about ten minutes.",
-
-    maxPlays: 1,
+      "Hi there. What would you like to drink today?",
+    maxPlays: 2
   },
 
-
   // =========================
-  // 16 — Restaurant
+  // 02 — Restaurant
   // =========================
   {
     spokenText:
-      "Take your time. There's no rush.",
-
-    maxPlays: 1,
+      "Are you ready to order, or do you need a few more minutes?",
+    maxPlays: 2
   },
 
-
   // =========================
-  // 17 — Airport
+  // 03 — Shopping
   // =========================
   {
     spokenText:
-      "Boarding's already started, so we should head to the gate.",
-
-    maxPlays: 1,
+      "We don't have this shirt in black. Would another color be okay?",
+    maxPlays: 2
   },
 
-
   // =========================
-  // 18 — Hotel
+  // 04 — Meeting someone
   // =========================
   {
     spokenText:
-      "Your room isn't ready yet, but you're welcome to leave your bags with us.",
-
-    maxPlays: 1,
+      "I'm running about fifteen minutes late. Is that okay?",
+    maxPlays: 2
   },
 
-
   // =========================
-  // 19 — Restaurant (bill)
+  // 05 — Restaurant
   // =========================
   {
     spokenText:
-      "Would you like separate checks, or should I just put it all on one?",
-
-    maxPlays: 1,
+      "This dish is pretty spicy. Are you okay with spicy food?",
+    maxPlays: 2
   },
 
-
   // =========================
-  // 20 — Travel / transport
+  // 06 — Hotel
   // =========================
   {
     spokenText:
-      "If we don't leave now, we'll miss the last train.",
+      "What time would you like us to call you tomorrow morning?",
+    maxPlays: 2
+  },
 
-    maxPlays: 1,
+  // =========================
+  // 07 — Everyday conversation
+  // =========================
+  {
+    spokenText:
+      "I'm thinking about getting something to eat. Have you eaten yet?",
+    maxPlays: 2
+  },
+
+  // =========================
+  // 08 — Coffee shop
+  // =========================
+  {
+    spokenText:
+      "We're out of oat milk today, but we have regular milk and soy milk.",
+    maxPlays: 1
+  },
+
+  // =========================
+  // 09 — Travel
+  // =========================
+  {
+    spokenText:
+      "The bus won't be here for another thirty minutes. Do you want to wait or take a taxi?",
+    maxPlays: 1
+  },
+
+  // =========================
+  // 10 — Restaurant
+  // =========================
+  {
+    spokenText:
+      "I'm sorry, but the kitchen has already closed. We can still serve drinks though.",
+    maxPlays: 1
+  },
+
+  // =========================
+  // 11 — Hotel
+  // =========================
+  {
+    spokenText:
+      "Your room won't be ready until three, but we can store your luggage for you.",
+    maxPlays: 1
+  },
+
+  // =========================
+  // 12 — Shopping
+  // =========================
+  {
+    spokenText:
+      "This one is on sale, but unfortunately you can't return it after you buy it.",
+    maxPlays: 1
+  },
+
+  // =========================
+  // 13 — Asking directions
+  // =========================
+  {
+    spokenText:
+      "The station is a little far from here. You could walk, but I'd probably take the bus.",
+    maxPlays: 1
+  },
+
+  // =========================
+  // 14 — Making plans
+  // =========================
+  {
+    spokenText:
+      "I can't make it tonight after all. Would sometime tomorrow afternoon work for you?",
+    maxPlays: 1
+  },
+
+  // =========================
+  // 15 — Restaurant problem
+  // =========================
+  {
+    spokenText:
+      "I'm really sorry. We accidentally gave your order to another table, so it'll take about ten more minutes.",
+    maxPlays: 1
+  },
+
+  // =========================
+  // 16 — Airport
+  // =========================
+  {
+    spokenText:
+      "Your flight has been delayed until seven thirty. You don't need to stay at the gate right now.",
+    maxPlays: 1
+  },
+
+  // =========================
+  // 17 — Hotel problem
+  // =========================
+  {
+    spokenText:
+      "I'm afraid we don't have the room you booked available tonight, but we can upgrade you at no extra charge.",
+    maxPlays: 1
+  },
+
+  // =========================
+  // 18 — Everyday conversation
+  // =========================
+  {
+    spokenText:
+      "You look exhausted. Why don't we skip dinner out tonight and just order something at home?",
+    maxPlays: 1
+  },
+
+  // =========================
+  // 19 — Travel decision
+  // =========================
+  {
+    spokenText:
+      "If we take the train, we'll get there faster, but the bus is about half the price. What do you think?",
+    maxPlays: 1
+  },
+
+  // =========================
+  // 20 — Social conversation
+  // =========================
+  {
+    spokenText:
+      "I know we said we'd meet at six, but something came up at work. Would you mind pushing it back an hour?",
+    maxPlays: 1
   }
   
 ];
