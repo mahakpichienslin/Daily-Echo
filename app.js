@@ -727,6 +727,8 @@ micBtn.addEventListener(
   "click",
   () => {
 
+    micBtn.disabled = true;
+
     spokenResult.textContent =
       "กำลังฟัง...";
 
@@ -746,9 +748,12 @@ recognition.onresult =
         .trim();
 
 
-    spokenResult.textContent =
-      `คุณพูด: "${spokenAnswer}"`;
-    nextBtn.disabled = false;
+   spokenResult.textContent =
+  `คุณพูด: "${spokenAnswer}"`;
+
+micBtn.disabled = false;
+
+nextBtn.disabled = false;
 
   };
 
@@ -762,7 +767,9 @@ recognition.onerror =
     );
 
     spokenResult.textContent =
-      "ไม่ได้ยินคำตอบ กรุณาลองอีกครั้ง";
+  "ไม่ได้ยินคำตอบ กรุณาลองอีกครั้ง";
+
+micBtn.disabled = false;
 
   };
 
@@ -801,7 +808,18 @@ nextBtn.addEventListener(
     ) {
 
       loadQuestion();
-      micBtn.disabled = true;
+      playAudioBtn.disabled = false;
+      playAudioBtn.disabled =
+  false;
+
+micBtn.disabled =
+  true;
+
+spokenResult.textContent =
+  "กดไมค์แล้วพูดคำตอบเป็นภาษาอังกฤษ";
+
+spokenResult.textContent =
+  "กดไมค์แล้วพูดคำตอบเป็นภาษาอังกฤษ";;
 
     }
 
