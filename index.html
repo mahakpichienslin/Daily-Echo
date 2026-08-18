@@ -1,842 +1,385 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 
 <head>
-
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
 
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0"
-  />
+  >
 
-  <title>180 Day Prototype</title>
+  <title>180 Day - English Listening Test</title>
 
-  <link
-    rel="stylesheet"
-    href="style.css"
-  />
-
+  <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
   <main class="app">
 
-
-    <!-- =========================
-         HOME
-    ========================= -->
+    <!-- ==============================
+         SCREEN 1 : REGISTER
+    ============================== -->
 
     <section
       class="screen active"
-      id="homeScreen"
+      id="registerScreen"
     >
 
-      <div class="homeHero">
+      <div class="card">
 
-        <div class="topRow">
-
-          <div class="avatar">
-            🧑🏻
-          </div>
-
-          <div class="stats">
-
-            <span>🔥 12</span>
-
-            <span>💎 180</span>
-
-            <button>
-              ⚙️
-            </button>
-
-          </div>
-
+        <div class="logo">
+          180 DAY
         </div>
 
+        <p class="eyebrow">
+          TESTER PROGRAM
+        </p>
 
-        <div class="heroText">
+        <h1>
+          ก่อนเริ่มการเดินทาง
+        </h1>
 
-          <small>
-            180 Day
-          </small>
-
-          <h1>
-            Courage<br>
-            to speak<br>
-            is the <em>true</em><br>
-            measure of<br>
-            progress.
-          </h1>
-
-        </div>
-
-      </div>
+        <p class="description">
+          กรุณากรอกข้อมูลสำหรับเข้าร่วม
+          การทดลองใช้งาน 180 Day
+        </p>
 
 
-      <div class="homePanel">
+        <div class="form-group">
 
-        <article class="journeyCard">
+          <label for="name">
+            ชื่อ / ชื่อเล่น
+          </label>
 
-          <p>
-            Today’s Journey
-          </p>
-
-
-          <div class="dayRow">
-
-            <strong>
-              Day 1
-            </strong>
-
-            <span>
-              1 / 180
-            </span>
-
-          </div>
-
-
-          <div class="bar">
-
-            <i></i>
-
-          </div>
-
-
-          <button
-            class="primary"
-            data-go="mapScreen"
+          <input
+            type="text"
+            id="name"
+            placeholder="ชื่อเล่นของคุณ"
+            autocomplete="name"
           >
 
-            <span>
-              🧭
-            </span>
+        </div>
 
-            <b>
 
-              Continue Journey
+        <div class="form-group">
 
-              <small>
-                Go to Realm Map
-              </small>
+          <label for="instagram">
+            Instagram
+          </label>
 
-            </b>
+          <div class="input-prefix">
 
-            <span>
-              ›
-            </span>
+            <span>@</span>
 
-          </button>
+            <input
+              type="text"
+              id="instagram"
+              placeholder="username"
+              autocomplete="off"
+            >
 
-        </article>
+          </div>
+
+        </div>
+
+
+        <label class="consent">
+
+          <input
+            type="checkbox"
+            id="consent"
+          >
+
+          <span>
+            ยินยอมให้ใช้ข้อมูลและผลการทดสอบ
+            สำหรับการคัดเลือกผู้ทดลองใช้
+            และการพัฒนาแอป 180 Day
+          </span>
+
+        </label>
+
+
+        <p
+          class="error-message"
+          id="registerError"
+        ></p>
 
 
         <button
-          class="reviewCard"
-          data-go="itemScreen"
+          class="primary-btn"
+          id="continueBtn"
         >
-
-          <span class="cards">
-            🃏
-          </span>
-
-          <span>
-
-            <b>
-              Items in Review
-            </b>
-
-            <strong>
-              2 items
-            </strong>
-
-            <small>
-              Ready to practice
-            </small>
-
-          </span>
-
-          <span>
-            ›
-          </span>
-
+          ดำเนินการต่อ
         </button>
 
       </div>
-
-
-      <nav class="nav">
-
-        <button
-          class="active"
-          data-go="homeScreen"
-        >
-
-          ⌂
-
-          <small>
-            Home
-          </small>
-
-        </button>
-
-
-        <button
-          data-go="mapScreen"
-        >
-
-          🗺
-
-          <small>
-            Map
-          </small>
-
-        </button>
-
-
-        <button
-          data-go="itemScreen"
-        >
-
-          💼
-
-          <small>
-            Journey
-          </small>
-
-        </button>
-
-
-        <button>
-
-          ♙
-
-          <small>
-            Avatar
-          </small>
-
-        </button>
-
-      </nav>
 
     </section>
 
 
 
-    <!-- =========================
-         MAP
-    ========================= -->
+    <!-- ==============================
+         SCREEN 2 : START
+    ============================== -->
 
     <section
       class="screen"
-      id="mapScreen"
+      id="startScreen"
     >
 
-      <div class="mapPage">
+      <div class="card">
+
+        <p class="eyebrow">
+          LISTENING TEST
+        </p>
+
+        <h1>
+          วัดระดับความเข้าใจ
+          ภาษาอังกฤษ ขอให้ทุกคนตั้งใจนะครับ
+        </h1>
+
+        <p class="description">
+          แบบทดสอบนี้เป็นการวัดระดับ
+          ภาษาอังกฤษที่ใช้สื่อสาร
+          ในชีวิตประจำวัน 
+        </p>
 
 
-        <img
-          class="map-background"
-          src="assets/map/background.png"
-          alt="Map Background"
+        <div class="test-info">
+
+          <div class="info-item">
+
+            <strong>20</strong>
+
+            <span>
+              คำถาม
+            </span>
+
+          </div>
+
+
+          <div class="info-item">
+
+            <strong>🔊</strong>
+
+            <span>
+              ฟังเสียง
+            </span>
+
+          </div>
+
+
+          <div class="info-item">
+
+            <strong>2×</strong>
+
+            <span>
+              สูงสุดต่อข้อ
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="notice">
+
+          <strong>
+            ก่อนเริ่ม
+          </strong>
+
+          <p>
+            จะไม่มีประโยคภาษาอังกฤษให้อ่าน
+            กรุณาฟังเสียงและเลือกความหมาย
+            ที่ตรงกับสิ่งที่ได้ยินมากที่สุด
+          </p>
+
+        </div>
+
+
+        <button
+          class="primary-btn"
+          id="startBtn"
         >
+          เริ่มแบบทดสอบ
+        </button>
+
+      </div>
+
+    </section>
 
 
-        <header class="mapHeader">
+
+    <!-- ==============================
+         SCREEN 3 : TEST
+    ============================== -->
+
+    <section
+      class="screen"
+      id="testScreen"
+    >
+
+      <div class="test-card">
+
+        <div class="test-header">
+
+          <span id="questionNumber">
+            Question 1 / 20
+          </span>
+
+          <span id="progressPercent">
+            5%
+          </span>
+
+        </div>
+
+
+        <div class="progress-track">
+
+          <div
+            class="progress-bar"
+            id="progressBar"
+          ></div>
+
+        </div>
+
+
+        <div class="listen-area">
+
+          <p class="listen-title">
+            ฟังประโยคภาษาอังกฤษ
+          </p>
+
 
           <button
-            class="back"
-            data-go="homeScreen"
+            class="speaker-btn"
+            id="playAudioBtn"
+            aria-label="เล่นเสียง"
           >
-            ←
+            🔊
           </button>
 
 
-          <div>
-
-            <h2>
-              Ascending Realms
-            </h2>
-
-            <p>
-              Each realm is a chapter.
-              <br>
-              Courage opens the path.
-            </p>
-
-          </div>
-
-
-          <span class="heart">
-            ❤️ 5
-          </span>
-
-        </header>
-
-
-
-        <div class="realms">
-
-
-          <div class="realm realm-4">
-
-    <img
-        src="assets/map/crystal-spire.png"
-        alt="Crystal Spire"
-    >
-
-    <div class="realm-label">
-
-        <h3>Crystal Spire</h3>
-
-        <p>
-            Speak Without Fear
-        </p>
-
-    </div>
-
-</div>
-
-
-          <div class="realm realm-3">
-
-    <img
-        src="assets/map/whispering-woods.png"
-        alt="Whispering Woods"
-    >
-
-    <div class="realm-label">
-
-        <h3>Whispering Woods</h3>
-
-        <p>
-            Find your own voice
-        </p>
-
-    </div>
-
-</div>
-
-
-          <div class="realm realm-2">
-
-    <img
-        src="assets/map/echoing-shores.png"
-        alt="Echoing Shores"
-    >
-
-    <div class="realm-label">
-
-        <h3>Echoing Shores</h3>
-
-        <p>
-            Beyond Myself
-        </p>
-
-    </div>
-
-</div>
-
-
-          <button
-    class="realm realm-1"
-    data-go="itemScreen"
->
-
-    <img
-        src="assets/map/dawn-fields.png"
-        alt="Dawn Fields"
-    >
-
-    <div class="realm-label">
-
-        <h3>Dawn Fields</h3>
-
-        <p>
-            Learn to speak about yourself.
-        </p>
-
-    </div>
-
-</button>
+          <p
+            class="listen-count"
+            id="listenCount"
+          >
+            ฟังได้อีก 2 ครั้ง
+          </p>
 
         </div>
-
-      </div>
-
-
-      <nav class="nav">
-
-        <button
-          data-go="homeScreen"
-        >
-
-          ⌂
-
-          <small>
-            Home
-          </small>
-
-        </button>
-
-
-        <button
-          class="active"
-          data-go="mapScreen"
-        >
-
-          🗺
-
-          <small>
-            Map
-          </small>
-
-        </button>
-
-
-        <button
-          data-go="itemScreen"
-        >
-
-          💼
-
-          <small>
-            Journey
-          </small>
-
-        </button>
-
-
-        <button>
-
-          ♙
-
-          <small>
-            Avatar
-          </small>
-
-        </button>
-
-      </nav>
-
-    </section>
-
-
-
-    <!-- =========================
-         ITEM
-    ========================= -->
-
-    <section
-      class="screen itemPage"
-      id="itemScreen"
-    >
-
-      <div class="itemTop">
-
-        <button
-          data-go="mapScreen"
-        >
-          ×
-        </button>
-
-
-        <span>
-
-          Day 1
-          &nbsp;•&nbsp;
-          Item
-
-          <b id="itemCount">
-            1/2
-          </b>
-
-        </span>
-
-
-        <button>
-          ♡
-        </button>
-
-      </div>
-
-
-
-      <div
-        class="stepLine"
-        id="stepLine"
-      >
-
-        <i class="on"></i>
-
-        <i></i>
-
-        <i></i>
-
-        <i></i>
-
-        <i></i>
-
-      </div>
-
-
-
-      <div class="lesson">
-
-
-        <p id="moment">
-
-          Moment 1 of 5
-
-        </p>
-
-
-        <h2 id="stageTitle">
-
-          Scene
-
-        </h2>
-
-
-        <p id="stageHelp">
-
-          Look at the moment.
-          Let the image stay with you.
-
-        </p>
-
-
-
-        <div class="scene">
-
-          <div class="window"></div>
-
-          <div
-            class="person"
-            id="person"
-          >
-            👋🧑🏻
-          </div>
-
-          <div
-            class="prop"
-            id="prop"
-          >
-            ✨
-          </div>
-
-        </div>
-
-
-
-        <button
-          class="roundAction"
-          id="actionBtn"
-        >
-          ▶
-        </button>
-
 
 
         <div
-          class="sentence"
-          id="sentence"
-        >
-
-          My name is Tom.
-
-        </div>
-
-
-        <small>
-          🔊 EN
-        </small>
-
-      </div>
-
-
-
-      <div class="stageDock">
+          class="answers"
+          id="answersContainer"
+        ></div>
 
 
         <button
-          class="stage active"
-          data-stage="0"
+          class="primary-btn next-btn"
+          id="nextBtn"
+          disabled
         >
-
-          <span>▧</span>
-
-          <small>
-            Scene
-          </small>
-
-        </button>
-
-
-        <button
-          class="stage"
-          data-stage="1"
-        >
-
-          <span>🎧</span>
-
-          <small>
-            Feel
-          </small>
-
-        </button>
-
-
-        <button
-          class="stage"
-          data-stage="2"
-        >
-
-          <span>🎙</span>
-
-          <small>
-            Echo
-          </small>
-
-        </button>
-
-
-        <button
-          class="stage"
-          data-stage="3"
-        >
-
-          <span>?</span>
-
-          <small>
-            Unlock
-          </small>
-
-        </button>
-
-
-        <button
-          class="stage"
-          data-stage="4"
-        >
-
-          <span>✎</span>
-
-          <small>
-            Express
-          </small>
-
+          ข้อต่อไป
         </button>
 
       </div>
-
-
-
-      <div class="courage">
-
-        <span>
-          ✨
-        </span>
-
-        <p>
-
-          No pressure.
-          Just progress.
-
-          <br>
-
-          <b>
-            Courage comes first.
-          </b>
-
-        </p>
-
-      </div>
-
-
-
-      <button
-        class="continue"
-        id="nextStepBtn"
-      >
-
-        Continue
-
-      </button>
 
     </section>
 
 
 
-    <!-- =========================
-         CHECKPOINT
-    ========================= -->
+    <!-- ==============================
+         SCREEN 4 : REVIEW / SUBMIT
+    ============================== -->
 
     <section
-      class="screen checkpoint"
-      id="checkpointScreen"
+      class="screen"
+      id="submitScreen"
     >
 
-      <div class="confetti">
+      <div class="card">
 
-        ◆ ✦ ◆ ✨ ✦ ◆
+        <p class="eyebrow">
+          COMPLETED
+        </p>
 
-      </div>
+        <h1>
+          ทำครบ 20 ข้อแล้ว
+        </h1>
 
-
-      <h2>
-
-        Checkpoint
-        <br>
-        Reached!
-
-      </h2>
-
-
-      <p>
-        Cycle 1 Preview
-      </p>
-
-
-
-      <div class="gate">
-
-        🚩
-
-        <br>
-
-        <span>
-          🪨
-        </span>
-
-        <b>
-          💎
-        </b>
-
-      </div>
-
-
-
-      <article class="checkpointCard">
-
-        <p>
-
-          You showed up.
-
-          <br>
-
-          You practiced.
-
-          <br>
-
-          <b>
-            That’s progress.
-          </b>
-
+        <p class="description">
+          ระบบจะคำนวณผลการทดสอบ
+          หลังจากคุณกดส่งคำตอบ
         </p>
 
 
-        <div class="heartDivider">
-          ♡
+        <div class="submit-icon">
+          ✓
         </div>
 
 
-
-        <div class="summary">
-
-
-          <div>
-
-            <b>
-              ⭐
-            </b>
-
-            <strong>
-              2
-            </strong>
-
-            <small>
-              Items Learned
-            </small>
-
-          </div>
-
-
-          <div>
-
-            <b>
-              ↻
-            </b>
-
-            <strong>
-              2
-            </strong>
-
-            <small>
-              Items Reviewed
-            </small>
-
-          </div>
-
-
-          <div>
-
-            <b>
-              💬
-            </b>
-
-            <strong>
-              2
-            </strong>
-
-            <small>
-              Sentences Created
-            </small>
-
-          </div>
-
-        </div>
-
-
-
         <button
-          class="primary"
-          data-go="homeScreen"
+          class="primary-btn"
+          id="submitBtn"
         >
-
-          <span></span>
-
-          <b>
-            Continue Journey
-          </b>
-
-          <span>
-            ›
-          </span>
-
+          ส่งแบบทดสอบ
         </button>
 
-
-        <button
-          class="textBtn"
-          data-go="mapScreen"
-        >
-
-          Back to Realm Map
-
-        </button>
-
-      </article>
+      </div>
 
     </section>
 
+
+
+    <!-- ==============================
+         SCREEN 5 : THANK YOU
+    ============================== -->
+
+    <section
+      class="screen"
+      id="thankYouScreen"
+    >
+
+      <div class="card">
+
+        <div class="success-icon">
+          ✓
+        </div>
+
+        <p class="eyebrow">
+          THANK YOU
+        </p>
+
+        <h1>
+          ขอบคุณสำหรับ
+          การทำแบบทดสอบ
+        </h1>
+
+        <p class="description">
+          ทีมงานจะติดต่อกลับ
+          หากคุณอยู่ในกลุ่มทดลองแอป
+          180 Day
+        </p>
+
+
+        <!-- คะแนนซ่อนไว้จากผู้ใช้ -->
+        <p
+          id="hiddenResult"
+          hidden
+        ></p>
+
+      </div>
+
+    </section>
 
   </main>
 
 
-  <script src="app.js"></script>
+  <script src="script.js"></script>
 
 </body>
 
