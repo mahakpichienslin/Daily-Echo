@@ -734,7 +734,11 @@ micBtn.addEventListener(
       return;
     }
 
-    micBtn.disabled = true;
+    spokenAnswer = "";
+
+    micBtn.classList.add(
+      "listening"
+    );
 
     spokenResult.textContent =
       "กำลังฟัง...";
@@ -779,6 +783,14 @@ recognition.onerror =
 micBtn.disabled = false;
 
   };
+recognition.onend =
+  () => {
+
+    micBtn.classList.remove(
+      "listening"
+    );
+
+  };
 
 
 
@@ -807,7 +819,34 @@ nextBtn.addEventListener(
 
     });
 
+
+    // ปิดไมค์ก่อนเปลี่ยนข้อ
+    if (recognition) {
+
+      try {
+        recognition.stop();
+      }
+      catch (error) {
+        console.log(
+          "Recognition already stopped"
+        );
+      }
+
+    }
+
+if (recognition) {
+
+  try {
+
+    recognition.stop();
+
+  }
+
+  catch (e) {}
+
+}
     currentQuestion++;
+
 
     if (
       currentQuestion <
@@ -815,6 +854,7 @@ nextBtn.addEventListener(
     ) {
 
       loadQuestion();
+
     }
 
     else {
