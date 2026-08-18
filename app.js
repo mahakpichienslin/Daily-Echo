@@ -501,9 +501,6 @@ const playAudioBtn =
 const listenCount =
   document.getElementById("listenCount");
 
-const answersContainer =
-  document.getElementById("answersContainer");
-
 const nextBtn =
   document.getElementById("nextBtn");
 
@@ -627,84 +624,46 @@ function loadQuestion() {
   const question =
     questions[currentQuestion];
 
-
-  selectedAnswer = null;
-
   playsUsed = 0;
 
+  spokenAnswer = "";
+
+  answerAccepted = false;
 
   nextBtn.disabled = true;
 
-
   questionNumber.textContent =
-    `Question ${currentQuestion + 1} / ${questions.length}`;
-
+    `Question ${
+      currentQuestion + 1
+    } / ${
+      questions.length
+    }`;
 
   const progress =
-    ((currentQuestion + 1) / questions.length) * 100;
-
+    (
+      (currentQuestion + 1) /
+      questions.length
+    ) * 100;
 
   progressPercent.textContent =
     `${Math.round(progress)}%`;
 
-
   progressBar.style.width =
     `${progress}%`;
-
 
   listenCount.textContent =
     `ฟังได้อีก ${question.maxPlays} ครั้ง`;
 
+  playAudioBtn.disabled =
+    false;
 
-  playAudioBtn.disabled = false;
-
-
-  // ล้างคำตอบเก่า
-
- spokenAnswer = "";
-answerAccepted = false;
-
-nextBtn.disabled = true;
-
-document.getElementById(
-  "spokenResult"
-).textContent =
-  "กดไมค์แล้วพูดคำตอบเป็นภาษาอังกฤษ";
-    (answer, index) => {
-
-      const button =
-        document.createElement("button");
-
-
-      button.className =
-        "answer-btn";
-
-
-      button.textContent =
-        answer;
-
-
-      button.addEventListener(
-        "click",
-        () => {
-
-          selectAnswer(
-            button,
-            index
-          );
-
-        }
-      );
-
-
-      answersContainer.appendChild(
-        button
-      );
-
-    }
-  );
+  spokenResult.textContent =
+    "กดไมค์แล้วพูดคำตอบเป็นภาษาอังกฤษ";
 
 }
+
+
+  
 
 
 // ===========================================
